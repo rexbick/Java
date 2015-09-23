@@ -1,0 +1,30 @@
+color green = color(0,255,0);
+color red = color(255,0,0);
+int dia = 500;
+float r = dia / 2;
+float rsq = r * r;
+int x0 = 500;
+int y0 = 500;
+
+void setup()
+{
+  size(1000, 1000);
+}
+
+void draw()
+{
+  float dsq = sq(mouseX - x0) + sq(mouseY - y0);
+
+  
+  if (dsq < rsq)
+  {
+    fill(green);
+    ellipse(x0, y0, dia, dia);
+  }
+  
+    else
+    {
+      fill(red);
+      ellipse(x0, y0, dia, dia);
+    }
+}
