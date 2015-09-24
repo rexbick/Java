@@ -1,0 +1,35 @@
+color rainbow=color(255,255,255);
+PImage img;
+PImage im2;
+
+void setup()
+{  
+  size(1000,1000);
+  img = loadImage("mole 2.png");
+  im2 = loadImage("hammer.png");
+}
+
+void mousePressed()
+{
+  rainbow=color(random(255),random(255),random(255));
+}
+
+void draw()
+{
+  background(rainbow);
+  fill(0,200,200);
+  rect(50,50,850,850);
+  fill(0,50,50);
+  ellipse(200,175,200,200);
+  ellipse(475,175,200,200);
+  ellipse(750,175,200,200);
+  ellipse(200,475,200,200);
+  ellipse(475,475,200,200);
+  ellipse(750,475,200,200);
+  ellipse(200,775,200,200);
+  ellipse(475,775,200,200);
+  ellipse(750,775,200,200); 
+ image(img,70,65); 
+ imageMode(CENTER);
+ image(im2,mouseX,mouseY);
+}
